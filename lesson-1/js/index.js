@@ -28,7 +28,6 @@
 		// STEP 3: Assign a click event listener to the above element, and include a reference to the function to be invoked
 		element.addEventListener('click',updateName);
 
-        //PARAMATERS NOT PARAMETERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         function updateName(){
 
         
