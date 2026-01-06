@@ -1,24 +1,28 @@
 // STEP 1: Initialize game variables
 			// STEP 1a: Pick random number
 			let randomNumber = Math.floor(Math.random() *100) + 1;
-            console.log(randomNumber)
-			// STEP 1b: Create variables to represent the three paragraphs above that will contain user feedback
+            console.log(randomNumber);
 			
+            // STEP 1b: Create variables to represent the three paragraphs above that will contain user feedback
+			let guesses = document.querySelector('#guesses');
+            let lastResult = doculment.querySelector('p#lastResult');
+            let lowOrHi = document.querySelector('#lowOrHi');
 
 			// STEP 1c: Create variables to represent the guessing form
-
+            let guessField = document.querySelector('input#guessField');
+            let guessSubmit = document.querySelector('button');
 
 			// STEP 1d: Create variables to initialize counter for number of guesses
 			
-
+            let geussCounter = 1;
 
 			// STEP 2: Put focus on the field that allows user to type in guesses
 			
-
+            guessField.focus();
 			// STEP 3: Build a function to check the user's guess
-			
+			function checkGuess(){
 				// STEP 3b: Create a variable to contain what number the user entered
-				
+				let userGuess = Number(guessFilend.value);
 				// STEP 3c: If this is the first guess, add some text to the screen as a label for listing previous guesses for reference
 				
 				
@@ -52,7 +56,7 @@
 				
 				// STEP 3h: Increment the guess count, move focus to the guess field for the next guess, and clear out the old input
 				
-				
+            }
 			// STEP 4: Build a function called gameOver() to end the game
 			
 				// STEP 4a: Disable the guessing field and submit button
