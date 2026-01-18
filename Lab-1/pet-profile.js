@@ -6,7 +6,7 @@ var output = document.querySelector('p');
     let petAge = 15;
     let isHungry = true;
     let favoriteActivities = ['Ninja Training','Eating Pizza','Skateboarding','Partying'];
-    let mood = ['radical','street wise','knuckle cracking'];
+    let mood = ['Radical','Street Wise','Ready to Rumble'];
 //Generate Random Values
     function getRandom(array){
         let randomIndex = Math.floor(Math.random() * array.length);
@@ -15,6 +15,7 @@ var output = document.querySelector('p');
     let randomPetType = getRandom(petType);
     let randomPetAge = Math.floor(Math.random() * 15) + 1;
     let randomMood = getRandom(mood);
+    let randomActivity = getRandom(favoriteActivities);
 //User Interaction with basic math
 
 let elementName = document.querySelector('#petName');
@@ -30,32 +31,35 @@ let elementName = document.querySelector('#petName');
 
 let increaseAge = document.querySelector('#IncreaseAge');
        function ageUp(){
-       petAge++
-       elementAge.textContent = petAge
+       randomPetAge++
+       updateDescription();
        }
        increaseAge.addEventListener('click',ageUp)
 
-let elementAge = document.querySelector('#petAge')
-    elementAge.textContent = petAge;
-
 let decreaseAge = document.querySelector('#DecreaseAge');
-       function ageDown(){if(petAge > 0){
-       petAge--
-       elementAge.textContent = petAge
+       function ageDown(){if(randomPetAge > 0){
+       randomPetAge--
+       updateDescription();
        }
     }
     decreaseAge.addEventListener('click',ageDown)
 
-h = document.querySelector('#isHungry')
+let hungry = 'Hungry';
 
 let toggleHunger = document.querySelector('#HungerToggle')
         function hunger(){ 
             isHungry = !isHungry
         if (isHungry){
-            h.textContent = 'Hungry';
+            hungry = 'Hungry';
         }else{
-            h.textContent = 'Not Hungry';
+            hungry = 'Not Hungry';
         }
+        updateDescription();
     }
     toggleHunger.addEventListener('click',hunger);
+
 // Create a Fun Pet Description
+let petDescription = document.querySelector('#description')
+function updateDescription() {
+petDescription.textContent = 'A '+ randomPetAge +' year old ' + randomPetType + ' who loves ' + randomActivity + ' and is currently feeling ' +randomMood + '. They\'re ' + hungry}
+updateDescription();
