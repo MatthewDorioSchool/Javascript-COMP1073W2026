@@ -1,5 +1,5 @@
 var output = document.querySelector('p');
-//1. Declare and Initialize Variables
+//Declare and Initialize Variables
 
     let petName = 'Michelangelo';
     let petType = ['Turtle','Shark','Toad'];
@@ -7,7 +7,7 @@ var output = document.querySelector('p');
     let isHungry = true;
     let favoriteActivities = ['Ninja Training','Eating Pizza','Skateboarding','Partying'];
     let mood = ['radical','street wise','knuckle cracking'];
-//2. Generate Random Values
+//Generate Random Values
     function getRandom(array){
         let randomIndex = Math.floor(Math.random() * array.length);
         return array[randomIndex]
@@ -15,7 +15,7 @@ var output = document.querySelector('p');
     let randomPetType = getRandom(petType);
     let randomPetAge = Math.floor(Math.random() * 15) + 1;
     let randomMood = getRandom(mood);
-//3. User Interaction
+//User Interaction with basic math
 
 let elementName = document.querySelector('#petName');
         elementName.textContent = petName
@@ -46,6 +46,16 @@ let decreaseAge = document.querySelector('#DecreaseAge');
     }
     decreaseAge.addEventListener('click',ageDown)
 
-//4. Use Basic Math
+h = document.querySelector('#isHungry')
 
-//5. Create a Fun Pet Description
+let toggleHunger = document.querySelector('#HungerToggle')
+        function hunger(){ 
+            isHungry = !isHungry
+        if (isHungry){
+            h.textContent = 'Hungry';
+        }else{
+            h.textContent = 'Not Hungry';
+        }
+    }
+    toggleHunger.addEventListener('click',hunger);
+// Create a Fun Pet Description
