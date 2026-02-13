@@ -25,6 +25,8 @@ function highlightCycle(buttonId, itemSelector,highlightColor) {
 }
 
 // Initialize for different pairs
-highlightCycle('noun1', '.nounA', 'yellow');
-highlightCycle('noun2', '.nounB', '#ffcccb'); // Light Red
-highlightCycle('verb', '.verb', 'rgb(144, 238, 144)'); // Light Green
+highlightCycle('noun1', '.nounA', '#8E44AD');
+highlightCycle('verb', '.verb', '#3498DB');
+highlightCycle('adjective','.adjective','#32CD32')
+highlightCycle('noun2', '.nounB', '#FF8C00');
+highlightCycle('place','.place','#FF00FF')
