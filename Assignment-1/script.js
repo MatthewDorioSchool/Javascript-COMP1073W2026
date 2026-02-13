@@ -31,10 +31,16 @@ highlightCycle('adjective','.adjective','#32CD32')
 highlightCycle('noun2', '.nounB', '#FF8C00');
 highlightCycle('place','.place','#FF00FF');
 
-//Create arrays for story words
+//Arrays for story words
 const nouns1 = ['The turkey', 'Mom', 'The dog', 'My Teacher','The elephant','The cat'];
 const verbs = ['sat on','ate','danced with','saw','doesn\'t like','kissed'];
 const adjectives = ['a funny','a scary','a goofy','a slimy','a barking','a fat'];
 const nouns2 = ['goat','monkey','fish','cow','frog','bug','worm'];
 const places = ['on the moon','on the chair','in my spaghetti','in my soup','on the grass','in my shoes'];
 
+//Word indexs
+let nounIndex1 = 0;
+let verbIndex = 0;
+let adjectiveIndex = 0;
+let nounIndex2 = 0;
+let placeIndex = 0;
