@@ -1,0 +1,6 @@
+/*Highlight functino for selecting story words*/
+.highlight {
+  border: 3px solid #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); 
+  width: 100px;
+}
