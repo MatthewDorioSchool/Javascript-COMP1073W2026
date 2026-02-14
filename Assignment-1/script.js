@@ -49,7 +49,7 @@ const places = ['on the moon','on the chair','in my spaghetti','in my soup','on 
 
 
 // Reference the Story button (make sure it's the right one in your HTML)
-const storyButton = document.querySelector('button:last-of-type'); 
+const storyButton = document.getElementById('storyBtn'); 
 
 storyButton.addEventListener('click', () => {
     // Grab all elements currently having the 'highlight' class
