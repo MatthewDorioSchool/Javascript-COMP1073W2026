@@ -95,3 +95,39 @@ function displayStory(msgText) {
         msgPanel.remove();
     };
 }
+
+//random story button//
+
+const randomBtn = document.getElementById('randomBtn');
+
+randomBtn.addEventListener('click', () => {
+    // Map each selector to its corresponding variable update function and highlight color
+    const configs = [
+        { selector: '.nounA', update: (val) => { nounIndex1 = val; }, color: '#8E44AD' },
+        { selector: '.verb', update: (val) => { verbIndex = val; }, color: '#3498DB' },
+        { selector: '.adjective', update: (val) => { adjectiveIndex = val; }, color: '#32CD32' },
+        { selector: '.nounB', update: (val) => { nounIndex2 = val; }, color: '#FF8C00' },
+        { selector: '.place', update: (val) => { placeIndex = val; }, color: '#FF00FF' }
+    ];
+
+    // Loop through each configuration to pick a random word
+    configs.forEach(config => {
+        const items = document.querySelectorAll(config.selector);
+        // Generate a random integer between 0 and the number of items
+        const randomIndex = Math.floor(Math.random() * items.length);
+
+        // Clear existing highlights in this column
+        items.forEach(item => {
+            item.classList.remove('highlight');
+            item.style.backgroundColor = '';
+        });
+
+        // Apply the random selection
+        const selectedItem = items[randomIndex];
+        selectedItem.classList.add('highlight');
+        selectedItem.style.backgroundColor = config.color;
+
+        // Update the global index variable to keep it in sync
+        config.update(randomIndex);
+    });
+});
