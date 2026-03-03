@@ -89,7 +89,7 @@ School.prototype.findStudent = function (name) {
             return {
                course: course.title,
                info: student.getInfo(),
-               pass: student.isPass
+               pass: student.isPass()
             };
         }
     }
@@ -99,5 +99,21 @@ School.prototype.findStudent = function (name) {
 
 // TEST AREA
 
+const mySchool = new School("Harriet Todd");
 
+const math = new Course("Math");
+const science = new Course("Science");
 
+const s1 = new Student ("Ali",12,85);
+const s2 = new Student ("Bob", 13,45);
+
+mySchool.addCourse(math);
+mySchool.addCourse(science);
+
+math.addStudent(s1);
+math.addStudent(s2);
+
+console.log(math.listStudents());
+console.log(math.getAverage());
+
+console.log(mySchool.findStudent("Bob"));
