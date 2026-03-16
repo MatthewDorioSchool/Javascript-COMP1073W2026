@@ -62,3 +62,6 @@ function repaintCar() {
     impala.updateColor(newColor);
     renderProduct();
 }
+
+// Initial render of the product details
+renderProduct();
