@@ -43,7 +43,7 @@ function renderProduct() {
     document.getElementById('car-sku').textContent = impala.sku;
     document.getElementById('car-price').textContent = `$${impala.price.toFixed(2)}`;
     document.getElementById('car-color').textContent = impala.color;
-    document.getElementById('car-materials').textContent = impala.materials.join(", ");
+    document.getElementById('car-materials').textContent = impala.material.join(", ");
     
     const featureList = document.getElementById('car-features');
     featureList.innerHTML = "";
