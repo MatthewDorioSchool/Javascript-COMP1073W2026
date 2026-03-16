@@ -31,7 +31,15 @@ const impala = new ToyCar(
     6.99, 
     "5418D-BLUE", 
     ["Diecast Metal", "Plastic", "Rubber"], 
-    ["Pull back motor action", "Opening doors", "Coke bottle styling"], 
+    ["Pull back motor action", "Opening doors", "Detailed interior"], 
     5, 
     6
 );
+
+// Function to repaint the car with a new random color and update the display
+function repaintCar() {
+    const colors = ["Black", "Red", "White", "Blue"];
+    const newColor = colors[Math.floor(Math.random() * colors.length)];
+    impala.updateColor(newColor);
+    renderProduct();
+}
