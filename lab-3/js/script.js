@@ -36,6 +36,25 @@ const impala = new ToyCar(
     6
 );
 
+// Function to render the product details on the page
+
+function renderProduct() {
+    document.getElementById('car-name').textContent = `${impala.year} ${impala.brand} ${impala.model}`;
+    document.getElementById('car-sku').textContent = impala.sku;
+    document.getElementById('car-price').textContent = `$${impala.price.toFixed(2)}`;
+    document.getElementById('car-color').textContent = impala.color;
+    document.getElementById('car-materials').textContent = impala.materials.join(", ");
+    
+    const featureList = document.getElementById('car-features');
+    featureList.innerHTML = "";
+    impala.features.forEach(f => {
+        let li = document.createElement('li');
+        li.textContent = f;
+        featureList.appendChild(li);
+    });
+}
+
+
 // Function to repaint the car with a new random color and update the display
 function repaintCar() {
     const colors = ["Black", "Red", "White", "Blue"];
