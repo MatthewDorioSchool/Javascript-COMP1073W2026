@@ -13,4 +13,11 @@ function ToyCar(brand, model, year, scale, color, price, sku, material, features
     this.material = material;
     this.features = features;
     this.instock = stock;
+
+    // Method to update car color (Interaction)
+    this.updateColor = function(newColor) {
+        this.color = newColor;
+        this.sku = `${this.sku.split('-')[0]}-${newColor.toUpperCase()}`;
+    };
 }
+
