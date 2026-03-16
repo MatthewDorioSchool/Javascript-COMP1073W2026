@@ -21,3 +21,17 @@ function ToyCar(brand, model, year, scale, color, price, sku, material, features
     };
 }
 
+// Instantiate the product Based on the Blue 1967 Chevy Impala
+const impala = new ToyCar(
+    "Kinsmart", 
+    "Chevy Impala Hard Top", 
+    1967, 
+    "1/43", 
+    "Blue", 
+    6.99, 
+    "5418D-BLUE", 
+    ["Diecast Metal", "Plastic", "Rubber"], 
+    ["Pull back motor action", "Opening doors", "Coke bottle styling"], 
+    5, 
+    6
+);
