@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Toy Cars Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="product-container">
+        <div class="product-card">
+            <h1 id="car-name">Product</h1>
+            <h2 class="sku">SKU: <span id="car-sku"></span></h2>
+            <h2 class="price" id="car-price"></h2>
+            
+            <div class="details">
+                <h2>Color: <span id="car-color"></span></h2>
+                <h2>Materials: <span id="car-materials"></span></h2>
+                <h2>Key Features:</h2>
+                <ul id="car-features"></ul>
+            </div>
+
+            <button onclick="repaintCar()">Repaint Car</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
