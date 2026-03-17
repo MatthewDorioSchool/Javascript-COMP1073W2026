@@ -25,6 +25,39 @@
         "clover honey"
       ],
       "image" : "peach-mango.svg"
+    },
+    {
+      "name" : "Strawberry Sprinkles",
+      "calories" : 425,
+      "type" : "ice cream",
+      "ingredients" : [
+        "strawberries",
+        "sprinkles",
+        "Chocolate dipped"
+      ],
+      "image" : "strawberry-sprinkles.svg"
+    },
+    {
+      "name" : "Lemon Smarties",
+      "calories" : 300,
+      "type" : "sorbet",
+      "ingredients" : [
+        "lemon zest",
+        "smarties",
+        "lemon extract"
+      ],
+      "image" : "ice-cream-xtra1.svg"
+    },
+    {
+      "name" : "Cookie Dough Delight",
+      "calories" : 450,
+      "type" : "ice cream",
+      "ingredients" : [
+        "cookie dough",
+        "chocolate chips",
+        "vanilla extract"
+      ],
+      "image" : "ice-cream-xtra2.svg"
     }
   ]
 }
