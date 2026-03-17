@@ -75,17 +75,14 @@ function showTopFlavors(jsonObj) {
             ul.appendChild(listItem);
         }
         let calories = topFlavors[i]['calories'];
-        for (let j = 0; j < calories.length; j++) {
-            let listItem = document.createElement('li');
-            listItem.textContent = calories[j];
-            calUl.appendChild(listItem);
-        }
+        let caloriesItem = document.createElement('li');
+        caloriesItem.textContent = 'Calories: ' + calories;
+        calUl.appendChild(caloriesItem);
+
         let type = topFlavors[i]['type'];
-        for (let j = 0; j < type.length; j++) {
-            let listItem = document.createElement('li');
-            listItem.textContent = type[j];
-            typeUl.appendChild(listItem);
-        }
+        let typeItem = document.createElement('li');
+        typeItem.textContent = 'Type: ' + type;
+        typeUl.appendChild(typeItem);
 
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
         article.appendChild(h2);
